@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=".//styles/blog.css">
+  <link rel="stylesheet" href=".//styles/main.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src=".//js/header.js"></script>
+  <script>
+    $(document).mouseup(function (e) {
+      var container = $("#input-spisok");
+      if (container.has(e.target).length === 0) {
+        container.hide();
+      }
+    });
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__left">
+        <div class="logo__img">
+          <svg width="23" height="21" viewbox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.5 0L14.0819 7.9463H22.4371L15.6776 12.8574L18.2595 20.8037L11.5 15.8926L4.74047 20.8037L7.32238 12.8574L0.56285 7.9463H8.91809L11.5 0Z"
+              fill="#C4C4C4" />
+          </svg>
+        </div>
+        <span class="header__logo">
+          Logo
+        </span>
+        <nav class="nav__list">
+          <ul class="nav__list-list" id="nav__list-left">
+            <a class="header__off" href="##" id="off">
+              <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="29.4405" height="2.94405" transform="matrix(0.703985 0.710215 -0.703985 0.710215 2.0726 0)" fill="#fff"/>
+                <rect width="29.4405" height="2.94405" transform="matrix(0.703985 -0.710215 0.703985 0.710215 0 20.9091)" fill="#fff"/>
+                </svg>
+            </a>
+            <li class="nav__list__item">
+              <a href="home.html" class="list__item-link nav__link">
+                Home
+              </a>
+            </li>
+            <li class="nav__list__item">
+              <a href="upcoming.html" class="list__item-link nav__link">
+                Upcoming
+              </a>
+            </li>
+            <li class="nav__list__item">
+              <a href="blog.html" class="list__item-link nav__link header__is-active">
+                Blog
+              </a>
+            </li>
+            <li class="nav__list__item telegram__item">
+              <a href="" class="list__item-link telegram">
+                <svg width="26" height="27" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_f_49:561)">
+                    <path
+                      d="M13 22.1438C17.9706 22.1438 22 18.2533 22 13.4542C22 8.65502 17.9706 4.76453 13 4.76453C8.02944 4.76453 4 8.65502 4 13.4542C4 18.2533 8.02944 22.1438 13 22.1438Z"
+                      fill="#139BD0" />
+                  </g>
+                  <path
+                    d="M13 22.2069C17.9706 22.2069 22 18.3165 22 13.5173C22 8.71813 17.9706 4.82764 13 4.82764C8.02944 4.82764 4 8.71813 4 13.5173C4 18.3165 8.02944 22.2069 13 22.2069Z"
+                    fill="#139BD0" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.2948 15.5938C12.9482 15.9198 12.6046 16.2404 12.2642 16.5634C12.1452 16.6766 12.0114 16.7391 11.8406 16.7305C11.724 16.7245 11.6588 16.675 11.623 16.5682C11.3622 15.7868 11.0976 15.0072 10.8382 14.2249C10.813 14.149 10.7758 14.1122 10.6962 14.0884C10.0818 13.9073 9.46862 13.7219 8.85642 13.534C8.76222 13.505 8.66722 13.4672 8.58582 13.4137C8.46002 13.3314 8.44162 13.1972 8.55442 13.1007C8.65862 13.0117 8.78302 12.934 8.91222 12.8846C9.66322 12.5973 10.4182 12.3192 11.172 12.0386C13.085 11.3255 14.998 10.6129 16.9112 9.89981C17.275 9.76405 17.5546 9.95523 17.5168 10.3351C17.4926 10.578 17.4274 10.817 17.3748 11.0569C16.9594 12.9506 16.5436 14.8446 16.126 16.738C16.0268 17.1875 15.6998 17.3049 15.3166 17.0321C14.6748 16.5754 14.0336 16.1172 13.3922 15.6597C13.3616 15.6383 13.3298 15.6176 13.2948 15.5938ZM11.8542 16.1689C11.8614 16.167 11.8686 16.165 11.8758 16.1633C11.8798 16.1455 11.8856 16.1282 11.8872 16.1106C11.9284 15.6813 11.972 15.2522 12.0078 14.8222C12.0158 14.7264 12.0498 14.6585 12.1244 14.594C12.716 14.0832 13.304 13.5692 13.8932 13.0563C14.5454 12.4884 15.1978 11.921 15.8476 11.3508C15.8878 11.3156 15.9046 11.2558 15.9322 11.2071C15.871 11.2007 15.8054 11.177 15.7498 11.1909C15.674 11.2098 15.6022 11.2523 15.5346 11.2934C14.0952 12.1688 12.657 13.0457 11.2166 13.9193C11.1352 13.9687 11.12 14.0106 11.151 14.0969C11.2572 14.3914 11.3538 14.6886 11.454 14.9852C11.5874 15.3799 11.7208 15.7744 11.8542 16.1689Z"
+                    fill="white" />
+                  <defs>
+                    <filter id="filter0_f_49:561" x="0" y="0.764526" width="26" height="25.3793"
+                      filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feflood flood-opacity="0" result="BackgroundImageFix" />
+                      <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                      <fegaussianlur stdbeviation="2" result="effect1_foregroundBlur_49:561" />
+                    </filter>
+                  </defs>
+                </svg>
+                Telegram
+              </a>
+            </li>
+            <li class="nav__list__item twitter__item">
+              <a href="" class="list__item-link twitter">
+                <svg width="18" height="17" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 10.5172C20 5.18483 15.5228 0.862061 10 0.862061C4.47715 0.862061 0 5.18483 0 10.5172C0 15.8496 4.47715 20.1724 10 20.1724C15.5228 20.1724 20 15.8496 20 10.5172Z"
+                    fill="#55ACEE" />
+                  <path
+                    d="M12.394 5.49463C10.9752 5.52934 9.83701 6.6506 9.83701 8.02911C9.83701 8.22756 9.85906 8.42156 9.90401 8.60746C7.72138 8.50159 5.78629 7.49219 4.49101 5.95808C4.26495 6.33239 4.13501 6.7684 4.13501 7.23353C4.13501 8.1131 4.59933 8.88859 5.30401 9.34318C4.87372 9.32988 4.46816 9.21544 4.11401 9.02553C4.11381 9.03606 4.11401 9.04757 4.11401 9.05835C4.11401 10.2866 5.01952 11.3103 6.22101 11.5436C6.00067 11.6013 5.76858 11.6324 5.52901 11.6324C5.35959 11.6324 5.19532 11.6169 5.03501 11.587C5.36941 12.5943 6.33801 13.3278 7.48701 13.3481C6.58823 14.0283 5.45759 14.4334 4.22701 14.4334C4.01524 14.4334 3.80554 14.4222 3.60001 14.3986C4.76251 15.1184 6.14212 15.5379 7.62501 15.5379C12.4556 15.5379 15.097 11.6743 15.097 8.3236C15.097 8.21371 15.0949 8.10323 15.09 7.99435C15.6029 7.63761 16.0482 7.19074 16.4 6.68222C15.9294 6.88417 15.4234 7.02098 14.892 7.08194C15.4345 6.76834 15.8508 6.27161 16.047 5.67904C15.5395 5.96981 14.9774 6.18114 14.379 6.29504C13.9001 5.80232 13.2174 5.49463 12.462 5.49463C12.4393 5.49463 12.4165 5.49408 12.394 5.49463V5.49463Z"
+                    fill="white" />
+                </svg>
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a class="header__burger" id="burger" href="##">
+        <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.6875 21.5625C4.6875 21.3139 4.78627 21.0754 4.96209 20.8996C5.1379 20.7238 5.37636 20.625 5.625 20.625H24.375C24.6236 20.625 24.8621 20.7238 25.0379 20.8996C25.2137 21.0754 25.3125 21.3139 25.3125 21.5625C25.3125 21.8111 25.2137 22.0496 25.0379 22.2254C24.8621 22.4012 24.6236 22.5 24.375 22.5H5.625C5.37636 22.5 5.1379 22.4012 4.96209 22.2254C4.78627 22.0496 4.6875 21.8111 4.6875 21.5625ZM4.6875 14.0625C4.6875 13.8139 4.78627 13.5754 4.96209 13.3996C5.1379 13.2238 5.37636 13.125 5.625 13.125H24.375C24.6236 13.125 24.8621 13.2238 25.0379 13.3996C25.2137 13.5754 25.3125 13.8139 25.3125 14.0625C25.3125 14.3111 25.2137 14.5496 25.0379 14.7254C24.8621 14.9012 24.6236 15 24.375 15H5.625C5.37636 15 5.1379 14.9012 4.96209 14.7254C4.78627 14.5496 4.6875 14.3111 4.6875 14.0625ZM4.6875 6.5625C4.6875 6.31386 4.78627 6.0754 4.96209 5.89959C5.1379 5.72377 5.37636 5.625 5.625 5.625H24.375C24.6236 5.625 24.8621 5.72377 25.0379 5.89959C25.2137 6.0754 25.3125 6.31386 25.3125 6.5625C25.3125 6.81114 25.2137 7.0496 25.0379 7.22541C24.8621 7.40123 24.6236 7.5 24.375 7.5H5.625C5.37636 7.5 5.1379 7.40123 4.96209 7.22541C4.78627 7.0496 4.6875 6.81114 4.6875 6.5625Z"
+            fill="white" />
+        </svg>
+      </a>
+      <div class="header__right" id="nav__list-right">
+        <label class="search__container">
+          <input type="text" class="search__input" placeholder="Search" id="search">
+          <div class="input__spisok" id="input-spisok">
+            <div class="input__spisok__container">
+              <div class="input__spisok-title">
+                7 Days Rate
+              </div>
+              <a class="input__spisok-item" href="##">
+                <div class="input__spisok-item-left">
+                  <span class="input__spisok-item__numb">
+                    1
+                  </span>
+                  <img src=".//img/Rectangle53.png" alt="" class="input__list-item-img">
+                  <span class="input__spisok-item__top">
+                    Top 1
+                  </span>
+                </div>
+                <div class="input__spisok-item__score">
+                  1213 UI
+                </div>
+              </a>
+              <a class="input__spisok-item" href="##">
+                <div class="input__spisok-item-left">
+                  <span class="input__spisok-item__numb">
+                    1
+                  </span>
+                  <img src=".//img/Rectangle53.png" alt="" class="input__list-item-img">
+                  <span class="input__spisok-item__top">
+                    Top 2
+                    <br>
+                    Long Desription Long De
+                  </span>
+                </div>
+                <div class="input__spisok-item__score">
+                  1213 UI
+                </div>
+              </a>
+              <a class="input__spisok-item" href="##">
+                <div class="input__spisok-item-left">
+                  <span class="input__spisok-item__numb">
+                    1
+                  </span>
+                  <img src=".//img/Rectangle53.png" alt="" class="input__list-item-img">
+                  <span class="input__spisok-item__top">
+                    Top 1
+                  </span>
+                </div>
+                <div class="input__spisok-item__score">
+                  1213 UI
+                </div>
+              </a>
+              <a class="input__spisok-item" href="##">
+                <div class="input__spisok-item-left">
+                  <span class="input__spisok-item__numb">
+                    1
+                  </span>
+                  <img src=".//img/Rectangle53.png" alt="" class="input__list-item-img">
+                  <span class="input__spisok-item__top">
+                    Top 1
+                  </span>
+                </div>
+                <div class="input__spisok-item__score">
+                  1213 UI
+                </div>
+              </a>
+              <a class="input__spisok-item" href="##">
+                <div class="input__spisok-item-left">
+                  <span class="input__spisok-item__numb">
+                    1
+                  </span>
+                  <img src=".//img/Rectangle53.png" alt="" class="input__list-item-img">
+                  <span class="input__spisok-item__top">
+                    Top 2
+                    <br>
+                    Long Desription Long De
+                  </span>
+                </div>
+                <div class="input__spisok-item__score">
+                  1213 UI
+                </div>
+              </a>
+            </div>
+          </div>
+        </label>
+        <ul class="header__right__list">
+          <li class="header__right__list-item">
+            <a href="projects.html" class="header__right__list-item-link projects">
+              All projects
+            </a>
+          </li>
+          <li class="header__right__list-item add__item">
+            <a href="list.html" class="header__right__list-item-link add">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                  fill="url(#paint0_linear_53:570)" />
+                <path
+                  d="M10.9258 9.42383H13.3047V10.4492H10.9258V13.1445H9.83594V10.4492H7.45703V9.42383H9.83594V6.93359H10.9258V9.42383Z"
+                  fill="white" />
+                <defs>
+                  <lineargradient id="paint0_linear_53:570" x1="7.24569e-07" y1="21.5" x2="21.5" y2="5"
+                    gradientunits="userSpaceOnUse">
+                    <stop stop-color="#40FF78" />
+                    <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                  </lineargradient>
+                </defs>
+              </svg>
+              Add your projects
+            </a>
+          </li>
+          <li class="header__right__list-item">
+            <a href="contact.html" class="header__right__list-item-link nav__link">
+              Contact Us
+            </a>
+          </li>
+          <li class="header__right__list-item">
+            <a href="about.html" class="header__right__list-item-link nav__link">
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="blog">
+    <div class="container__content">
+      <h3 class="blog__title">
+        Blog
+      </h3>
+      <ul class="blog__list">
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+        <li class="blog__list-item">
+          <img src=".//img/blog.png" alt="">
+          <div class="blog__list-item-title">
+            Info 1
+          </div>
+          <p class="blog__list-item__text">
+            Chineasy has been widely featured in the press, including the Financial Times,[7] the Wall Street
+            Journal,[8] Time magazine,[9] and National Public Radio.[10] It won Wallpaper’s 2014 Design Award.[11]
+            Hsueh's book uses illustrations and storytelling.[12] Characters are illustrated by various illustrators
+            including Noma Bar.[13]...atrated by various illustrators including Noma Bar.[13]
+            ard.[11] Hsueh's book us...
+          </p>
+          <a href="info.html" class="blog__list-item__button">
+            Read article
+          </a>
+        </li>
+      </ul>
+      <ul class="room__right__down-list-panel">
+        <span class="panel__right-page">Page</span>
+        <li class="room__right__down-list-panel">
+          <a href="" class="list-panel_numb is-active">1</a>
+        </li>
+        <li class="room__right__down-list-panel">
+          <a href="" class="list-panel_numb">2</a>
+        </li>
+        <li class="room__right__down-list-panel">
+          <a href="" class="list-panel_numb">3</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <nav class="footer__nav__list">
+        <ul class="footer__nav__list-list">
+          <li class="footer__nav__list-list-item">
+            <a href="about.html" class="footer__nav__list-item__link">
+              About
+            </a>
+          </li>
+          <li class="footer__nav__list-list-item">
+            <a href="##" class="footer__nav__list-item__link">
+              Terms of Use
+            </a>
+          </li>
+          <li class="footer__nav__list-list-item">
+            <a href="contact.html" class="footer__nav__list-item__link">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>
