@@ -1,0 +1,171 @@
+/* List */
+
+.container__list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 850px;
+}
+
+.list__title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+.list__warning {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+}
+
+.list__text {
+    font-weight: normal;
+    font-size: 12px;
+    color: #979797;
+}
+
+.list__published {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #fff;
+}
+
+.list__question {
+    margin-left: 15px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #979797;
+}
+
+.list__form-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #fff;
+}
+
+.list__form-input {
+    border-radius: 10px;
+    padding: 8px 0px 7px 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #292A2D;
+}
+
+.custom-radio,
+.custom-radio-2,
+.custom-radio-3,
+.custom-radio-4 {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-radio+label,
+.custom-radio-2+label,
+.custom-radio-3+label,
+.custom-radio-4+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-weight: normal;
+    font-size: 12px;
+    color: #fff;
+}
+
+.custom-radio+label::before,
+.custom-radio-2+label::before, 
+.custom-radio-3+label::before,
+.custom-radio-4+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #292A2D;
+    background-color: #292A2D;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-radio:checked+label::before,
+.custom-radio-2:checked+label::before,
+.custom-radio-3:checked+label::before,
+.custom-radio-4:checked+label::before {
+    border-color: #E32368;
+    background-color: #E32368;
+}
+
+.list__form-info {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 8px;
+    color: #979797;
+}
+
+.list__form-date {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.list__form-date-item {
+    margin-right: 10px;
+}
+
+.list__form-date-item__input {
+    display: inline-block;
+    padding: 7px 9px 7px 9px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #292A2D;
+}
+
+.list__form-button {
+    display: block;
+    padding: 24px 110px 24px 110px;
+    margin-top: 23px;
+    font-weight: bold;
+    font-size: 15px;
+    border:  none;
+    cursor: pointer;
+    color: #FFFFFF;
+    border-radius: 15px;
+    background: linear-gradient(89.71deg, #612A44 2.28%, #48233E 51.13%, #371D30 97.99%);
+    transition: filter .3s ease-in-out;
+}
+
+.list__form-button:hover {
+    filter: drop-shadow(0px 0px 4px #1B2040);
+}
+
+@media (max-width: 1140px) {
+    .container__list {
+        max-width: 620px;
+    }
+}
+
+@media (max-width: 596px) {
+     .container__list {
+        padding-left: 11px;
+        padding-right: 11px;
+        max-width: 408px;
+    }
+}
+
+/* List */

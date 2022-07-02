@@ -1,0 +1,39 @@
+/* info */
+
+.container__info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 850px;
+}
+
+.info__title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+.info__text {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #979797;
+}
+
+@media (max-width: 1140px) {
+    .container__info {
+        max-width: 620px;
+    }
+}
+
+@media (max-width: 596px) {
+    .container__info {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+}
+
+/* info */
